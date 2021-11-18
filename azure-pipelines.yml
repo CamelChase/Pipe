@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'experiment1-conn'
+    subscriptionId: '849afbd7-f7cb-4c63-b158-d01209d41472'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'pipe'
+    location: 'West Europe'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/CamelChase/Pipe/master/CreateWebApp/azuredeploy.json'
+    overrideParameters: '-projectName pipe'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
