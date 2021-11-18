@@ -20,6 +20,6 @@ steps:
     location: 'West Europe'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/CamelChase/Pipe/master/CreateWebApp/azuredeploy.json'
-    overrideParameters: '-projectName Pipe'
+    overrideParameters: '-projectName pipe'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
