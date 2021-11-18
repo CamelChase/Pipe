@@ -19,7 +19,7 @@ steps:
     resourceGroupName: 'pipe'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/CamelChase/Pipe/master/CreateWebApp/azuredeploy.json?token=ACA7VJ5UIWKP3YBSSNEVKUTBSZVHK'
+    csmFileLink: 'https://raw.githubusercontent.com/CamelChase/Pipe/master/CreateWebApp/azuredeploy.json'
     overrideParameters: '-projectName Pipe'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
